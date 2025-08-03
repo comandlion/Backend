@@ -18,8 +18,25 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import JsonResponse
+
+def api_root(request):
+    return JsonResponse({
+        "message": "Welcome to the Real Estate API",
+        "version": "1.0",
+        "endpoints": {
+            "admin": "/admin/",
+            "auth": "/api/auth/",
+            "properties": "/api/properties/",
+            "locations": "/api/locations/",
+            "interactions": "/api/interactions/",
+            "communications": "/api/communications/",
+            "listings": "/api/listings/"
+        }
+    })
 
 urlpatterns = [
+    path('', api_root, name='api_root'),
     path('admin/', admin.site.urls),
     path('api/', include('Auth.urls')),
     path('api/', include('interactions.urls')),
