@@ -85,23 +85,23 @@ WSGI_APPLICATION = 'Backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
+    # 'secondary': {
+    # 'ENGINE': 'django.db.backends.mysql',
+    # 'NAME': 'Frima',
+    # 'USER': 'root',
+    # 'PASSWORD': '85213',
+    # 'HOST': 'localhost',
+    # 'PORT': '3306',
+    # },
+    # 'primary': {
+    # 'ENGINE': 'django.db.backends.mysql',
+    # 'NAME': 'Frima1',
+    # 'USER': 'root',
+    # 'PASSWORD': '85213',
+    # 'HOST': 'localhost',
+    # 'PORT': '3306',
+    # },
     'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'Frima',
-    'USER': 'root',
-    'PASSWORD': '85213',
-    'HOST': 'localhost',
-    'PORT': '3306',
-    },
-    'primary': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'Frima1',
-    'USER': 'root',
-    'PASSWORD': '85213',
-    'HOST': 'localhost',
-    'PORT': '3306',
-    },
-    'secondary': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
