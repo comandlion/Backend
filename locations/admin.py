@@ -31,6 +31,6 @@ class NeighborhoodAdmin(admin.ModelAdmin):
 
 @admin.register(Address)
 class AddressAdmin(admin.ModelAdmin):
-    list_display = ('street_address', 'city', 'state_province', 'postal_code', 'country', 'neighborhood')
-    search_fields = ('street_address', 'city', 'state_province', 'postal_code', 'country')
+    list_display = ('street', 'city', 'state_province', 'postal_code', 'country', 'neighborhood')
+    search_fields = ('street', 'state_province', 'postal_code', 'country')
     list_filter = ('neighborhood',)
