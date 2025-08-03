@@ -36,6 +36,7 @@ def api_root(request):
     })
 
 urlpatterns = [
+    path('', api_root, name='api_root'),
     path('admin/', admin.site.urls),
     path('api/', include('Auth.urls')),
     path('api/', include('interactions.urls')),
